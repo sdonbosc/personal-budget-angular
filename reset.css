@@ -38,7 +38,9 @@
    */
   
   h1 {
-    font-size: 3em;
+    font-size: 2em;
+    color: brown;
+    text-decoration-color: blueviolet;
     margin: 0.67em 0;
   }
   
