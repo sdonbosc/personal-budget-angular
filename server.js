@@ -32,6 +32,11 @@ app.get('/hello', (req, res) => {
         fs.readFile('../personal-budget/myBudget.json', (err, data) => {
            res.send(data.toString());
         });
+    });
+        app.use('/donut', (req, res) => {
+            fs.readFile('../personal-budget/myDonut.json', (err, data) => {
+               res.send(data.toString());
+            });
      
 });
 
