@@ -1,29 +1,32 @@
+//Budget API
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3000;
-app.use('/',express.static('public'));
+
+//app.use('/',express.static('public'));
+app.use(cors());
+
 var fs = require("fs");
-//  const budget = {
-// //     myBudget: [
-// //     {
-// //         title : 'Eat out',
-// //         budget:55
-// //     },
-// //     {
-// //         title: 'Rent',
-// //         budget:700
-// //     },
-// //     {
-// //         title: 'Groceries',
-// //         budget:333
-// //     },
 
-// // ]
-//  };
+ const budget = {
+     myBudget: [
+     {
+         title : 'Eat out',
+         budget:55
+     },
+     {
+         title: 'Rent',
+         budget:700
+     },
+     {
+         title: 'Groceries',
+         budget:333
+     },
 
-app.get('/hello', (req, res) => {
-    res.send('Hello World!');
-});
+ ]
+};
+
 
 //app.get('/budget',(req,res)=>{
     
@@ -41,5 +44,5 @@ app.get('/hello', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('Example app listening at http://localhost:${port}');
+    console.log('Example API listening at http://localhost:${port}');
 });
